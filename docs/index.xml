@@ -8,7 +8,20 @@
     <language>zh</language>
     <copyright>&amp;copy; 2022 &lt;a href=&#34;https://blog.zzxhot.com/&#34;&gt;小 z&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate><atom:link href="https://blog.zzxhot.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 15:11:43 +0800</lastBuildDate><atom:link href="https://blog.zzxhot.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tar使用手册</title>
+      <link>https://blog.zzxhot.com/linux/tar/</link>
+      <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
+      
+      <guid>https://blog.zzxhot.com/linux/tar/</guid>
+      <description>&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;.tar.gz和&lt;/em&gt;.tgz 用&lt;code&gt;tar -xzf &lt;/code&gt;解压&lt;/li&gt;
+&lt;li&gt;*.tar 用 &lt;code&gt;tar -xvf &lt;/code&gt;  解压&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>Diagram Support</title>
       <link>https://blog.zzxhot.com/posts/diagram-support/</link>
