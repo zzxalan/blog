@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>小z on 小z的博客</title>
-    <link>https://blog.zzxhot.com/blog/authors/%E5%B0%8Fz/</link>
+    <link>https://blog.zzxhot.com/authors/%E5%B0%8Fz/</link>
     <description>Recent content in 小z on 小z的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>&amp;copy; 2022 &lt;a href=&#34;https://blog.zzxhot.com/blog&#34;&gt;小 z&lt;/a&gt;
+    <copyright>&amp;copy; 2022 &lt;a href=&#34;https://blog.zzxhot.com&#34;&gt;小 z&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Thu, 28 Jul 2022 15:11:43 +0800</lastBuildDate><atom:link href="https://blog.zzxhot.com/blog/authors/%E5%B0%8Fz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jul 2022 15:11:43 +0800</lastBuildDate><atom:link href="https://blog.zzxhot.com/authors/%E5%B0%8Fz/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>git使用手册</title>
-      <link>https://blog.zzxhot.com/blog/git/git/</link>
+      <link>https://blog.zzxhot.com/git/git/</link>
       <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
       
-      <guid>https://blog.zzxhot.com/blog/git/git/</guid>
+      <guid>https://blog.zzxhot.com/git/git/</guid>
       <description>&lt;h3 id=&#34;基本概念&#34;&gt;基本概念&lt;/h3&gt;
 &lt;h4 id=&#34;工作区working-directory&#34;&gt;工作区（Working Directory）&lt;/h4&gt;
 &lt;p&gt;就是你在电脑里能看到的目录&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>tar使用手册</title>
-      <link>https://blog.zzxhot.com/blog/linux/tar/</link>
+      <link>https://blog.zzxhot.com/linux/tar/</link>
       <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
       
-      <guid>https://blog.zzxhot.com/blog/linux/tar/</guid>
+      <guid>https://blog.zzxhot.com/linux/tar/</guid>
       <description>&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;.tar.gz和&lt;/em&gt;.tgz 用&lt;code&gt;tar -xzf &lt;/code&gt;解压&lt;/li&gt;
