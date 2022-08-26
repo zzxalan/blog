@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>git使用手册 | 小z的博客</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="https://blog.zzxhot.com/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="https://blog.zzxhot.com/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="https://blog.zzxhot.com/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="https://blog.zzxhot.com/js/fontawesome.min.fbf58334762fcb42c16e0593596bb7b04a0c32bf8e0cdd596701a58706a96ef120cb2abab225e9591ee227ffd9043e5a.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.zzxhot.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://blog.zzxhot.com/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="基本概念
+工作区（Working Directory）
+就是你在电脑里能看到的目录
+版本库（Repository）
+工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Git",
+      "item":"https://blog.zzxhot.com/git/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"git使用手册",
+      "item":"https://blog.zzxhot.com/git/git/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.zzxhot.com/git/git/"
+    },
+    "headline": "git使用手册 | 小z的博客","datePublished": "2022-07-28T15:11:43+08:00",
+    "dateModified": "2022-07-28T15:11:43+08:00",
+    "wordCount":  230 ,
+    "author": {
+        "@type": "Person",
+        "name": ["小z"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "WANG Chucheng",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.zzxhot.com/images/icon.png"
+        }
+        },
+    "description": "\u003ch3 id=\u0022基本概念\u0022\u003e基本概念\u003c\/h3\u003e\n\u003ch4 id=\u0022工作区working-directory\u0022\u003e工作区（Working Directory）\u003c\/h4\u003e\n\u003cp\u003e就是你在电脑里能看到的目录\u003c\/p\u003e\n\u003ch4 id=\u0022版本库repository\u0022\u003e版本库（Repository）\u003c\/h4\u003e\n\u003cp\u003e工作区有一个隐藏目录\u003ccode\u003e.git\u003c\/code\u003e，这个不算工作区，而是Git的版本库。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="git使用手册 | 小z的博客" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://blog.zzxhot.com/images/icon.png">
+
+
+<meta property="og:url" content="https://blog.zzxhot.com/git/git/" />
+
+
+
+
+<meta property="og:description" content="基本概念
+工作区（Working Directory）
+就是你在电脑里能看到的目录
+版本库（Repository）
+工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="小z的博客" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-07-28T15:11:43&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2022-07-28T15:11:43&#43;08:00" />
+
+
+
+<meta property="article:section" content="Git" />
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">小z的博客</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">列表</a>
+            <a href="/linux/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">Linux</a>
+            <a href="/git/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">Git</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class=" bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">git使用手册</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-07-28</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>2分钟阅读时长</span>
+  </div>
+
+  
+
+  
+</div>
+
+
+  
+  
+
+  <h3 id="基本概念">基本概念</h3>
+<h4 id="工作区working-directory">工作区（Working Directory）</h4>
+<p>就是你在电脑里能看到的目录</p>
+<h4 id="版本库repository">版本库（Repository）</h4>
+<p>工作区有一个隐藏目录<code>.git</code>，这个不算工作区，而是Git的版本库。</p>
+<p>Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/919020037470528/0" alt="git-repo"></p>
+<h3 id="自报家门">自报家门</h3>
+<pre><code class="language-git">git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;email@example.com&quot;
+</code></pre>
+<p>&ndash;global 对所有的仓库生效，不添加则只对当前仓库生效</p>
+<h3 id="基本命令">基本命令</h3>
+<pre><code class="language-git">git init                        #创建仓库
+git add **.txt                  #文件添加到暂存区
+git rm **.txt                   #删除暂存区中的文件
+git commit -m &quot;提交说明&quot;         #提交修改(暂存区文件提交到分支中)
+git log [--pretty=oneline]      #查看提交历史，--pretty=oneline 简洁模式
+git status                      #查看当前状态
+</code></pre>
+<h3 id="版本管理">版本管理</h3>
+<pre><code class="language-git">git checkout -- **.txt     #把文件从工作区的修改全部撤销（回到暂存区后的状态）(删除也是一种修改)
+git reset HEAD  **.txt     #把暂存区的修改撤销掉（unstage），重新放回工作区
+
+git reset --hard [版本号 | HEAD^ | HEAD^^ | HEAD~100]  #版本回退到指定版本、上一个版本、上上个版本、往上100个版本
+git reflog  #输入命令历史
+</code></pre>
+<h3 id="远程仓库">远程仓库</h3>
+<pre><code class="language-git">git remote add origin git@github.com:zzxo/learngit.git  #关联远程仓库，origin是给远程仓库命名(origin默认习惯命名)
+git push -u origin master                               #本地分支推送到远程仓库，-u 关联分支
+git remote -v          #远程仓库信息
+git remote rm origin   #解除与远程仓库的绑定关系(不会删除远程仓库)
+git clone git@github.com:michaelliao/gitskills.git  #从远程仓库克隆一个本地仓库
+
+git pull     #抓取远程的新提交
+git rebase   #rebase操作的特点：把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了
+</code></pre>
+<h3 id="分支管理">分支管理</h3>
+<pre><code class="language-git">git branch [-a]      #查看分支 带*表示当前分支   -a 查看所有分支包括远端
+git branch dev       #创建分支
+git branch -d dev    #删除分支
+git checkout -b dev  #创建并切换分支(相当于git branch + git checkout) 不推荐分支操作用checkout
+git switch -c dev    #切换分支, -c 当不存在该分支时创建
+git merge dev        #合并指定分支到当前分支(合并dev到当前分支)
+</code></pre>
+<h4 id="分支管理策略">分支管理策略</h4>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/919023260793600/0" alt="git-br-policy"></p>
+<h3 id="工作区暂存">工作区暂存</h3>
+<pre><code class="language-git">git stash         #暂存工作区
+git stash list    #暂存列表
+git stash apply   #恢复暂存内容
+git stash drop    #删除暂存内容
+git stash pop     #恢复并删除暂存内容
+git stash apply stash@{0}  #恢复指定暂存内容
+
+git cherry-pick 4c805e2  #复制某个分支提交内容到当前分支，省掉手动操作
+</code></pre>
+<h3 id="子模块">子模块</h3>
+<p>.gitmodules 子模块配置文件</p>
+<pre><code class="language-git">git submodule add https://github.com/chaconinc/DbConnector   #添加子模块(.gitmodules文件会增加一条记录)
+git submodule init   #初始化本地配置文件
+git submodule update  #从该项目中抓取所有数据并检出父项目中列出的合适的提交
+git submodule update --init --recursive  #合并操作
+git clone --recurse-submodules git://****.git   #--recurse-submodules会初始化并更新子模块
+</code></pre>
+<h3 id="标签">标签</h3>
+<ul>
+<li>
+<p>命令<code>git tag &lt;tagname&gt; [commit id]</code>用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id；</p>
+</li>
+<li>
+<p>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</p>
+</li>
+<li>
+<p>命令<code>git tag</code>可以查看所有标签</p>
+</li>
+<li>
+<p>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</p>
+</li>
+<li>
+<p>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</p>
+</li>
+<li>
+<p>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</p>
+</li>
+<li>
+<p>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签</p>
+</li>
+</ul>
+</article>
+
+
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="https://blog.zzxhot.com/authors/%E5%B0%8Fz/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <i class="fas fa-user-circle fa-6x"></i>
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="https://blog.zzxhot.com/authors/%E5%B0%8Fz/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>小z</h3>
+        </a>
+        <span class="block pb-2"></span>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+
+      
+
+
+
+    </div>
+    
+      <div class="col-span-2">
+        
+        
+          <div
+  class="
+    bg-primary-bg
+   prose sticky top-16 z-10 hidden px-6 py-4 lg:block"
+>
+  <h3>本页内容</h3>
+</div>
+<div
+  class="sticky-toc  hidden px-6 pb-6 lg:block"
+>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#基本概念">基本概念</a>
+          <ul>
+            <li><a href="#工作区working-directory">工作区（Working Directory）</a></li>
+            <li><a href="#版本库repository">版本库（Repository）</a></li>
+          </ul>
+        </li>
+        <li><a href="#自报家门">自报家门</a></li>
+        <li><a href="#基本命令">基本命令</a></li>
+        <li><a href="#版本管理">版本管理</a></li>
+        <li><a href="#远程仓库">远程仓库</a></li>
+        <li><a href="#分支管理">分支管理</a>
+          <ul>
+            <li><a href="#分支管理策略">分支管理策略</a></li>
+          </ul>
+        </li>
+        <li><a href="#工作区暂存">工作区暂存</a></li>
+        <li><a href="#子模块">子模块</a></li>
+        <li><a href="#标签">标签</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    enableStickyToc();
+  });
+</script>
+
+        
+      </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2022 <a href="https://blog.zzxhot.com/">小 z</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+    </footer>
+  </body>
+</html>
