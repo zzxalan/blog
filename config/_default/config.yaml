@@ -42,3 +42,5 @@ taxonomies:
 
 build:
   useResourceCacheWhen: always
+
+publishDir: "docs"
