@@ -1,5 +1,6 @@
-baseURL: https://blog.zzxhot.com
+baseURL: https://blog.zzxhot.com/blog
 title: 小z的博客
+publishDir: "docs"
 
 # Uncomment when not installing with Hugo Modules
 #theme: eureka
@@ -9,7 +10,7 @@ theme: wangchucheng.com/hugo-eureka
 
 paginate: 3
 copyright: >
-  &copy; 2022 <a href="https://blog.zzxhot.com/">小 z</a>
+  &copy; 2022 <a href="https://blog.zzxhot.com/blog">小 z</a>
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 75
@@ -42,5 +43,3 @@ taxonomies:
 
 build:
   useResourceCacheWhen: always
-
-publishDir: "docs"
