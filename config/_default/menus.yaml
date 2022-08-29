@@ -1,13 +1,10 @@
 main:
-  - name: 关于
-    url: '#about'
-    weight: 1
   - name: 列表
     url: /posts/
+    weight: 1
+  - name: 工具手册
+    url: /tool/
     weight: 2
-  - name: Linux
-    url: /Linux/
+  - name: 关于
+    url: '#about'
     weight: 3
-  - name: Git
-    url: /Git/
-    weight: 4
