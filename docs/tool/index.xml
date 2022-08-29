@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 小z的博客</title>
+    <link>https://blog.zzxhot.com/tool/</link>
+    <description>Recent content in Linux on 小z的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2022 &lt;a href=&#34;https://blog.zzxhot.com&#34;&gt;小 z&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Thu, 28 Jul 2022 15:11:43 +0800</lastBuildDate><atom:link href="https://blog.zzxhot.com/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git使用手册</title>
+      <link>https://blog.zzxhot.com/tool/git/</link>
+      <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
+      
+      <guid>https://blog.zzxhot.com/tool/git/</guid>
+      <description>&lt;h3 id=&#34;基本概念&#34;&gt;基本概念&lt;/h3&gt;
+&lt;h4 id=&#34;工作区working-directory&#34;&gt;工作区（Working Directory）&lt;/h4&gt;
+&lt;p&gt;就是你在电脑里能看到的目录&lt;/p&gt;
+&lt;h4 id=&#34;版本库repository&#34;&gt;版本库（Repository）&lt;/h4&gt;
+&lt;p&gt;工作区有一个隐藏目录&lt;code&gt;.git&lt;/code&gt;，这个不算工作区，而是Git的版本库。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>markdown使用手册</title>
+      <link>https://blog.zzxhot.com/tool/markdown/</link>
+      <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
+      
+      <guid>https://blog.zzxhot.com/tool/markdown/</guid>
+      <description>&lt;h3 id=&#34;markdown使用手册&#34;&gt;markdown使用手册&lt;/h3&gt;</description>
+    </item>
+    
+    <item>
+      <title>tar使用手册</title>
+      <link>https://blog.zzxhot.com/tool/tar/</link>
+      <pubDate>Thu, 28 Jul 2022 15:11:43 +0800</pubDate>
+      
+      <guid>https://blog.zzxhot.com/tool/tar/</guid>
+      <description>&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;.tar.gz和&lt;/em&gt;.tgz 用&lt;code&gt;tar -xzf &lt;/code&gt;解压&lt;/li&gt;
+&lt;li&gt;*.tar 用 &lt;code&gt;tar -xvf &lt;/code&gt;  解压&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
